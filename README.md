@@ -8,13 +8,13 @@
 
 ## 主要目的
 ### ReactJS.NET
-* 將前端程式建置整合在.NET Project，後端也可以運行前端架構並共同合作
-* 運用 .NET MVC 的好處，Route 路徑轉導的工作交給原生的 MVC 
-* 支援 Isomorphic Javascript，便於SEO及後端 model 介接調整
+* 將前端程式建置整合在.NET Project，後端也可以運行前端架構並共同合作
+* 運用 .NET MVC 的好處，Route 路徑轉導的工作交給原生的 MVC 
+* 支援 Isomorphic Javascript，便於SEO及後端 model 介接調整
 
-###UnitTest
-* 檢測單元，讓每一個component 維持高品質的正確性
-* 使用 jest 測試 React components
+### UnitTest
+* 檢測單元，讓每一個component 維持高品質的正確性
+* 使用 jest 測試 React components
 * 導入 storybook 建置 component reference site
 
  
