@@ -16,7 +16,7 @@
 
 ## 打包方式
 打包方式分為: MS Build 與透過 Web Compiler 進行打包與壓縮。
-目前東森購物小網前端專案，多使用 MS Build，CSS 部份則是透過 Web Compiler 將 SCSS 檔案轉譯為 CSS 檔後，再透過 MS Build 進行打包。
+目前現有的前端專案，多使用 MS Build，CSS 部份則是透過 Web Compiler 將 SCSS 檔案轉譯為 CSS 檔後，再透過 MS Build 進行打包。
 
 ## 安裝工具
 1. [Web Essential](http://vswebessentials.com/)
@@ -39,7 +39,7 @@ internal class JsBundleCollection
   // YourBundleName: 為這次要Bundle的目的，通常為頁面的名稱或功能的名稱
   internal static string[] YourBundleName = 
   {
-    // YourFileStoragePath: 檔案存放路徑; 
+    // YourFileStoragePath: 檔案存放路徑。
     // YourFileName.js: 檔案的名稱，需包含副檔名。
     // 如果有多個檔案要一起Bundle，則使用「,」隔開。
     "~/Scripts/YourFileStoragePath/YourFileName.js",
@@ -52,6 +52,8 @@ internal class JsBundleCollection
 ```cs
 // BundleConfig.cs
 
+#region ScriptBundle
+
 // 使用ScriptBundle進行打包
 // YourBundleKey 是要導入網頁(cshtml)中所使用的Key，
 // 通常命名方式為「~/bundles/頁面或功能名稱」
@@ -63,6 +65,8 @@ bundles.Add(new ScriptBundle("YourBundleKey")
 bundles.Add(new ScriptBundle("YourBundleKey")
   .Include(JsBundleCollection.YourBundleName)
   .Include(JsBundleCollection.YourBundleName2));
+
+#endregion
 
 ```
 
@@ -98,6 +102,8 @@ internal class JsxBundleCollection
 ```cs
 // BundleConfig.cs
 
+#region ReactBundle
+
 // 使用BabelBundle進行打包
 // YourBundleKey 是要導入View中所使用的Key，
 // 通常命名方式為「~/bundles/頁面或功能名稱」
@@ -109,6 +115,8 @@ bundles.Add(new BabelBundle("YourBundleKey")
 bundles.Add(new BabelBundle("YourBundleKey")
   .Include(JsBundleCollection.YourBundleName)
   .Include(JsBundleCollection.YourBundleName2))
+
+#endregion
 
 ```
 
@@ -153,6 +161,8 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
 ```cs
 // BundleConfig.cs
 
+#region StyleBundle
+
 // 使用 StyleBundle 進行打包
 // YourBundleKey 是要導入網頁中所使用的Key，
 // 通常命名方式為「~/Content/頁面或功能名稱」
@@ -160,6 +170,8 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
 bundles.Add(new StyleBundle("YourBundleKey").Include(
             "~/YourFileStoragePath/YourFileName.css",
             "~/YourFileStoragePath/YourFileName2.css"));
+
+#endregion
 
 ```
 
