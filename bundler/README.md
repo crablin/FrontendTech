@@ -37,9 +37,8 @@
 internal class JsBundleCollection
 {
   // YourBundleName: 為這次要Bundle的目的，通常為頁面的名稱或功能的名稱
-  internal static string[] YourBundleName = 
+  internal static string[] YourBundleName =
   {
-
     // YourFileStoragePath: 檔案存放路徑。
     // YourFileName.js: 檔案的名稱，需包含副檔名。
     // 如果有多個檔案要一起Bundle，則使用「,」隔開。
@@ -94,9 +93,9 @@ bundles.Add(new ScriptBundle("YourBundleKey")
 internal class JsxBundleCollection
 {
   // YourBundleName 為這次要Bundle的目的，通常為頁面的名稱或功能的名稱;
-  internal static string[] YourBundleName = 
+  internal static string[] YourBundleName =
   {
-    // YourFileStoragePath: 檔案存放路徑; 
+    // YourFileStoragePath: 檔案存放路徑。 
     // YourFileName.jsx: 檔案的名稱，需包含副檔名。
     // 如果有多個檔案要一起Bundle，則使用「,」隔開。
     "~/Scripts/YourFileStoragePath/YourFileName.jsx",
@@ -143,6 +142,7 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
 1. 於 SCSS 檔案上按右鍵 > Web Compiler > Compile File
 ![Alt text](/bundler/1-3.png)
 1. 刪除預設產生的css與min.css
+![Alt text](/bundler/1-4.png)
 1. 開啟compilerconfig.json
 1. 找到方才加入的scss檔案，並修改outputFile路徑到Content目錄下
 ```json
