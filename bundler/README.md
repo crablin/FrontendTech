@@ -7,8 +7,8 @@
 1. [打包方式](#打包方式)
 1. [安裝工具](#安裝工具)
 1. [打包設定檔](#打包設定檔)
-1. [打包JavaScript](#打包_JavaScript)
-1. [打包JSX](#打包JSX)
+1. [打包JavaScript](#打包javascript)
+1. [打包JSX](#打包jsx)
 1. [編譯與打包樣式](#編譯與打包樣式)
 
 ## 目的
@@ -29,7 +29,7 @@
 
 ![Alt text](/bundler/1-1.png)
 
-### 打包_JavaScript
+### 打包JavaScript
 1. 於JsBundleCollection中，新增要Bundle的檔案集合
 ```cs
 // BundleConfig.cs
@@ -39,16 +39,20 @@ internal class JsBundleCollection
   // YourBundleName: 為這次要Bundle的目的，通常為頁面的名稱或功能的名稱
   internal static string[] YourBundleName = 
   {
+
     // YourFileStoragePath: 檔案存放路徑。
     // YourFileName.js: 檔案的名稱，需包含副檔名。
     // 如果有多個檔案要一起Bundle，則使用「,」隔開。
     "~/Scripts/YourFileStoragePath/YourFileName.js",
     "~/Scripts/YourFileStorePath2/YourFileName2.js"
+
   };
 }
+
 ```
 
 2. 在「#region ScriptBundle」與對應的「#endregion」中，新增下面的範例
+
 ```cs
 // BundleConfig.cs
 
@@ -73,14 +77,17 @@ bundles.Add(new ScriptBundle("YourBundleKey")
 3. 在*.cshtml中引用已Bundle的檔案
 ```cs
 // *.cshtml
+
 // 在@Scripts.Render中指定於2.所設定的「YourBundleKey」
 @Scripts.Render("YourBundleKey")
+
 
 ```
 
 
 ### 打包JSX
 1. 於JsxBundleCollection中，新增要Bundle的檔案集合
+
 ```cs 
 // BundleConfig.cs
 
@@ -141,7 +148,7 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
 ```json
 // compilerconfig.json
 
-// 原本
+// 原本
 {
   "outputFile": "Content/scss/test.css",
   "inputFile": "Content/scss/test.scss"
@@ -166,7 +173,7 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
 // 使用 StyleBundle 進行打包
 // YourBundleKey 是要導入網頁中所使用的Key，
 // 通常命名方式為「~/Content/頁面或功能名稱」
-// 這裡加入的檔案是已編譯後的css檔，而不是scss檔
+// 這裡加入的檔案是已編譯後的css檔，而不是scss檔
 bundles.Add(new StyleBundle("YourBundleKey").Include(
             "~/YourFileStoragePath/YourFileName.css",
             "~/YourFileStoragePath/YourFileName2.css"));
