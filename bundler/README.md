@@ -160,7 +160,7 @@ SCSS 檔案在 Bundle 之前，要先透過「Web Compiler」將 SCSS 檔編譯�
   "inputFile": "Content/scss/test.scss"
 }
 ```
-5. 在「compilerconfig.json」上按右鍵 > Web Compiler > Re-compile all files。
+5. 在「compilerconfig.json」上按右鍵 > Web Compiler > Re-compile all files。
 6. 會依所設定的輸出路徑，重新產生css與min.css檔案
 
 #### 打包Style
