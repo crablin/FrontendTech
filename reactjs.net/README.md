@@ -1,4 +1,4 @@
-# ReactJS.NET Architecture
+# ReactJS.NET Project Architecture
 *ReactJS.NET 運作及架構說明*
 
 ## 目錄
