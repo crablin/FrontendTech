@@ -1,5 +1,5 @@
-# EIT F2E Bundler 
-*東森訊息科技前端團隊 CSS與JavaScript 打包壓縮方式*
+# F2E Bundler 
+*前端團隊 CSS與JavaScript 打包壓縮方式*
 
 ## 目錄
 
