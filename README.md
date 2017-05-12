@@ -19,4 +19,11 @@
 * 使用 jest 測試 React components
 * 導入 storybook 建置 component reference site
 
- 
+### 外部套件
+目前專案中，為節省開發時間，常用的外部件如下:
+* [jQuery 2.2.0](https://code.jquery.com/jquery/)
+* [jQuery Validation Plugin](https://jqueryvalidation.org/)
+* [Lodash 4.6.1](https://lodash.com/)
+* [React-Slick](https://github.com/akiran/react-slick)
+* [classNames](https://github.com/JedWatson/classnames)
+* [Reflux](https://github.com/reflux/refluxjs)
