@@ -4,7 +4,9 @@
 ## 目錄
 1. [ReactJS.NET](reactjs.net/)
 1. [UnitTest](unit_test/)
+1. [Bundler](bundler/)
 1. [外部套件](#外部套件)
+
 
 ## 主要目的
 ### ReactJS.NET
@@ -16,6 +18,9 @@
 * 檢測單元，讓每一個component 維持高品質的正確性
 * 使用 jest 測試 React components
 * 導入 storybook 建置 component reference site
+
+### Bundler
+* 將多個JavaScript、React Component與Style檔案，依頁面或功能打包成單一檔案，減少頁面Http Request的數量。
 
 ### 外部套件
 目前專案中，為節省開發時間，常用的外部件如下:
