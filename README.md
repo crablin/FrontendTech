@@ -29,4 +29,4 @@
 * [Lodash 4.6.1](https://lodash.com/)
 * [React-Slick](https://github.com/akiran/react-slick)
 * [classNames](https://github.com/JedWatson/classnames)
-* [Reflux](https://github.com/reflux/refluxjs)
+* [Reflux](https://github.com/reflux/refluxjs) [(中文說明)](https://segmentfault.com/a/1190000002793786)
